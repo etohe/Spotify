@@ -1,0 +1,39 @@
+<div class="play-list-body">
+    <ul class="play-list-table-header">
+        <li class="track-index"> #</li>
+        <li (click)="changeSort('name')">Nombre ❤</li>
+        <li (click)="changeSort('album')" >álbum 🆗</li>        
+        <li (click)="changeSort('none')">fecha incorporación 🍌😁</li>
+        <li><i class="uil uil-clock-eight"></i></li>
+    </ul>
+    <!-- <ul (click)="sendPlay(track)" [ngClass]="{'Sel' : currentTrackArray===index+1, 'play-list-rows' : currentTrackArray!==index+1}" *ngFor="let track of tracks | orderList:optionSort.property:optionSort.order; let index=index;"> -->
+    <ul (click)="sendPlay(track)" [ngClass]="{'play-list-rowsSel' : ((currentTrackArray===index+1) && (iconFavorite===false)), 'play-list-rows' : !((currentTrackArray===index+1) && (iconFavorite===false))}" *ngFor="let track of tracks | orderList:optionSort.property:optionSort.order; let index=index;">
+        <li [ngClass]="{'track-indexSel' : ((currentTrackArray===index+1) && (iconFavorite===false)), 'track-index' : !((currentTrackArray===index+1) && (iconFavorite===false))}">{{index+1}}</li>
+        <li class="track-name">
+            <ng-container *ngTemplateOutlet="coverSection;context:{track:track}"></ng-container>
+        </li>
+        <li class="track-name-opacity">
+            😀 {{track.album  }}
+        </li>
+        <li class="track-name-opacity">
+            {{track.album}}
+        </li>
+        <li class="track-name-opacity">
+            {{track.album}}
+        </li>
+
+    </ul>
+</div>
+
+<!--template del cover-->
+<ng-template #coverSection let-track="track">
+
+    <div class="cover-section">
+        <img appImgBroken [customImg]="'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png'" class="cover-track" [src]="track.cover" [alt]="track.name">
+        <div class="cover-info">
+            <div class="name-track">{{track.name}}</div>
+            <div class="name-track-details">{{track.artist.name}}</div>
+        </div>
+    </div>
+
+</ng-template>

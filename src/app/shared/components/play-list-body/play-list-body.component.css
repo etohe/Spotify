@@ -1,0 +1,86 @@
+.play-list-body {
+    padding: 1rem 2rem 6rem 0;
+}
+
+.play-list-table-header {
+    width: 100%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 40px 3fr 2fr 2fr 1fr;
+    margin: 0;
+    padding: 0;
+    font-size: 90%;
+    letter-spacing: 1px;
+    border-bottom: solid 1px var(--color-2);
+    padding-bottom: .5rem;
+}
+
+.play-list-table-header li {
+    text-transform: uppercase;
+    color: var(--color-4);
+    opacity: .7;
+    cursor: pointer;
+}
+
+.play-list-rows {
+    width: 100%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 40px 3fr 2fr 2fr 1fr;
+    margin: 0;
+    padding: 1rem 0 0 0;
+    cursor:pointer
+    
+}
+
+.play-list-rows .track-name-opacity {
+    opacity: .6;
+    font-weight: 300;
+}
+
+.track-index {
+    font-weight: 800;
+    text-align: center;
+}
+
+.track-indexSel {
+    font-weight: 1000;    
+    text-align: center;    
+    font-size: larger;
+}
+
+
+.cover-section {
+    display: flex;
+    padding: 0
+}
+
+.cover-section .cover-track {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.cover-section .cover-info {
+    padding: 0 1rem;
+}
+
+.cover-section .cover-info .name-track-details {
+    font-size: 80%;
+    opacity: .7;
+}
+
+.play-list-rowsSel {
+    width: 100%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 40px 3fr 2fr 2fr 1fr;
+    margin: 0;
+    padding: 1rem 0 0 0;
+    cursor:pointer;
+    
+    opacity: .9;
+    border-radius: 5px;
+    background-color: var(--color-2);
+    
+}

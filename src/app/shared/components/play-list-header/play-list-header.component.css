@@ -1,0 +1,78 @@
+.play-list-header {
+    display: flex;
+    height: 8rem;
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    background-color: #ffffff14;
+}
+
+.content-text {
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.cover {
+    position: relative;
+    width: 10rem;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.cover .cover-mock {
+    height: 100%;
+    width: 10rem;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 5.5rem;
+    background-color: var(--color-2);
+    box-shadow: var(--shadow-1);
+}
+
+.content-text .title,
+.content-text .sub-title {
+    margin: 0;
+    font-weight: 100;
+}
+
+.content-text .title {
+    font-size: 4rem;
+    letter-spacing: -7px;
+}
+
+.content-text .small-text {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.content-text .count-tracks {
+    font-weight: 300;
+    opacity: .7;
+    padding-left: .5rem;
+}
+
+.buttons-player {
+    border-radius: 2rem;
+    background-color: var(--color-1);
+    width: 60px;
+    height: 60px;
+    position: absolute;        
+    top: 7.5rem;
+    left: 51.5rem;
+}
+
+.play-btn {
+    color: var(--color-4);
+    border: 0;
+    font-size: 2rem;
+    border-radius: 2rem;
+    background-color: var(--color-1);
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}

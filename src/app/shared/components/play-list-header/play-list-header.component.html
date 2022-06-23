@@ -1,0 +1,19 @@
+<div class="play-list-header">
+    <div class="cover">
+        <div class="cover-mock">
+            <i [ngClass]="{'uil-heart' : iconFavorite===true, 'uil-list-ul' : iconFavorite!==true}" class="uil "></i>
+        </div>
+    </div>    
+    <div class="content-text">
+        <div class="small-text">Playlist</div>
+        <h1 class="title">{{title}}</h1>
+        <h5 class="sub-title">Leifer Jesus Mendez Zambrano <span class="count-tracks">{{nsong}} canciones</span> </h5>        
+        <div *ngIf="iconFavorite">
+            <div (click)="playListFavorite()" class="buttons-player">                
+                <button class="play-btn">
+                    <i class="uil uil-play"></i>
+                </button>
+            </div>
+        </div>
+    </div>    
+</div>
